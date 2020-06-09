@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		63059430247462E100D9531B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6305942F247462E100D9531B /* AppDelegate.swift */; };
-		63059434247462E100D9531B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059433247462E100D9531B /* ViewController.swift */; };
+		63059434247462E100D9531B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059433247462E100D9531B /* LoginViewController.swift */; };
 		63059439247462E300D9531B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63059438247462E300D9531B /* Assets.xcassets */; };
 		6305943C247462E300D9531B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6305943A247462E300D9531B /* LaunchScreen.storyboard */; };
 		63059447247462E300D9531B /* CombiteTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059446247462E300D9531B /* CombiteTestTests.swift */; };
+		636FBFB3248FEEE3001C8822 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FBFB2248FEEE3001C8822 /* LoginModel.swift */; };
+		637A622524782E8100BB6A3B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A622424782E8100BB6A3B /* LoginView.swift */; };
+		637A622824782F2C00BB6A3B /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A622724782F2C00BB6A3B /* CodableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,13 +30,16 @@
 /* Begin PBXFileReference section */
 		6305942C247462E100D9531B /* CombiteTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombiteTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6305942F247462E100D9531B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63059433247462E100D9531B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63059433247462E100D9531B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		63059438247462E300D9531B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6305943B247462E300D9531B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6305943D247462E300D9531B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63059442247462E300D9531B /* CombiteTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombiteTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63059446247462E300D9531B /* CombiteTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombiteTestTests.swift; sourceTree = "<group>"; };
 		63059448247462E300D9531B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636FBFB2248FEEE3001C8822 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		637A622424782E8100BB6A3B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		637A622724782F2C00BB6A3B /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +81,11 @@
 		6305942E247462E100D9531B /* CombiteTest */ = {
 			isa = PBXGroup;
 			children = (
+				636FBFB4248FEF53001C8822 /* Controllers */,
+				636FBFB1248FEED2001C8822 /* models */,
+				637A622624782F1800BB6A3B /* protocols */,
+				637A622324782E7400BB6A3B /* Views */,
 				6305942F247462E100D9531B /* AppDelegate.swift */,
-				63059433247462E100D9531B /* ViewController.swift */,
 				63059438247462E300D9531B /* Assets.xcassets */,
 				6305943A247462E300D9531B /* LaunchScreen.storyboard */,
 				6305943D247462E300D9531B /* Info.plist */,
@@ -91,6 +100,38 @@
 				63059448247462E300D9531B /* Info.plist */,
 			);
 			path = CombiteTestTests;
+			sourceTree = "<group>";
+		};
+		636FBFB1248FEED2001C8822 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				636FBFB2248FEEE3001C8822 /* LoginModel.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		636FBFB4248FEF53001C8822 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				63059433247462E100D9531B /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		637A622324782E7400BB6A3B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				637A622424782E8100BB6A3B /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		637A622624782F1800BB6A3B /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				637A622724782F2C00BB6A3B /* CodableView.swift */,
+			);
+			path = protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63059434247462E100D9531B /* ViewController.swift in Sources */,
+				636FBFB3248FEEE3001C8822 /* LoginModel.swift in Sources */,
+				637A622524782E8100BB6A3B /* LoginView.swift in Sources */,
+				637A622824782F2C00BB6A3B /* CodableView.swift in Sources */,
+				63059434247462E100D9531B /* LoginViewController.swift in Sources */,
 				63059430247462E100D9531B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
