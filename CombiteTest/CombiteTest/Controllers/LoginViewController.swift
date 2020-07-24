@@ -29,12 +29,22 @@ final class LoginViewController: UIViewController {
             })
             .assign(to: \.buttonIsEnabled, on: customView)
         
-        customView.buttonAction = buttonAction
+        customView.loginButtonAction = login
+        customView.createAccountButtonAction = createAccount
     }
     
-    private func buttonAction() -> Void{
-        print("Logged in")
+    private func login(){
+        let vc = HomeViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
+    
+    private func createAccount() {
+        let vc = CreateAccountViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
 
 }
 

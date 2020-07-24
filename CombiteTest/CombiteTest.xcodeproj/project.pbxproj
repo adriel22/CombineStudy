@@ -12,9 +12,14 @@
 		63059439247462E300D9531B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63059438247462E300D9531B /* Assets.xcassets */; };
 		6305943C247462E300D9531B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6305943A247462E300D9531B /* LaunchScreen.storyboard */; };
 		63059447247462E300D9531B /* CombiteTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63059446247462E300D9531B /* CombiteTestTests.swift */; };
+		632D0A2324A96889003A5F15 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D0A2224A96889003A5F15 /* HomeViewController.swift */; };
+		632D0A2524A968F2003A5F15 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632D0A2424A968F2003A5F15 /* HomeView.swift */; };
 		636FBFB3248FEEE3001C8822 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636FBFB2248FEEE3001C8822 /* LoginModel.swift */; };
 		637A622524782E8100BB6A3B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A622424782E8100BB6A3B /* LoginView.swift */; };
 		637A622824782F2C00BB6A3B /* CodableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637A622724782F2C00BB6A3B /* CodableView.swift */; };
+		63AC938324B392E200CD6FE2 /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC938224B392E200CD6FE2 /* CreateAccountView.swift */; };
+		63AC938524B3931200CD6FE2 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC938424B3931200CD6FE2 /* CreateAccountViewController.swift */; };
+		63AC938724BDD04F00CD6FE2 /* CreateAccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63AC938624BDD04F00CD6FE2 /* CreateAccountModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,9 +42,14 @@
 		63059442247462E300D9531B /* CombiteTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CombiteTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		63059446247462E300D9531B /* CombiteTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombiteTestTests.swift; sourceTree = "<group>"; };
 		63059448247462E300D9531B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		632D0A2224A96889003A5F15 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		632D0A2424A968F2003A5F15 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		636FBFB2248FEEE3001C8822 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		637A622424782E8100BB6A3B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		637A622724782F2C00BB6A3B /* CodableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableView.swift; sourceTree = "<group>"; };
+		63AC938224B392E200CD6FE2 /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		63AC938424B3931200CD6FE2 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		63AC938624BDD04F00CD6FE2 /* CreateAccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				636FBFB2248FEEE3001C8822 /* LoginModel.swift */,
+				63AC938624BDD04F00CD6FE2 /* CreateAccountModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -114,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				63059433247462E100D9531B /* LoginViewController.swift */,
+				632D0A2224A96889003A5F15 /* HomeViewController.swift */,
+				63AC938424B3931200CD6FE2 /* CreateAccountViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -122,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				637A622424782E8100BB6A3B /* LoginView.swift */,
+				632D0A2424A968F2003A5F15 /* HomeView.swift */,
+				63AC938224B392E200CD6FE2 /* CreateAccountView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -235,10 +250,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				636FBFB3248FEEE3001C8822 /* LoginModel.swift in Sources */,
+				632D0A2524A968F2003A5F15 /* HomeView.swift in Sources */,
 				637A622524782E8100BB6A3B /* LoginView.swift in Sources */,
+				63AC938524B3931200CD6FE2 /* CreateAccountViewController.swift in Sources */,
 				637A622824782F2C00BB6A3B /* CodableView.swift in Sources */,
 				63059434247462E100D9531B /* LoginViewController.swift in Sources */,
 				63059430247462E100D9531B /* AppDelegate.swift in Sources */,
+				63AC938724BDD04F00CD6FE2 /* CreateAccountModel.swift in Sources */,
+				63AC938324B392E200CD6FE2 /* CreateAccountView.swift in Sources */,
+				632D0A2324A96889003A5F15 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
