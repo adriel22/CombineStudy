@@ -8,15 +8,7 @@
 
 import UIKit
 import Combine
-struct Test {
-    let firstName: String?
-       let lastName: String?
-       let birthday: String?
-       let address: String?
-       let email: String?
-       let password: String?
-       let passwordConfirmation: String?
-}
+
 class CreateAccountView: UIView {
     private(set) var firstName: PassthroughSubject<String?, Never> = PassthroughSubject()
     private(set) var lastName: PassthroughSubject<String?, Never> = PassthroughSubject()
@@ -25,8 +17,6 @@ class CreateAccountView: UIView {
     private(set) var email: PassthroughSubject<String?, Never> = PassthroughSubject()
     private(set) var password: PassthroughSubject<String?, Never> = PassthroughSubject()
     private(set) var passwordConfirmation: PassthroughSubject<String?, Never> = PassthroughSubject()
-    
-//    @Published var teste = Test(
     
     var buttonIsEnabled: Bool = false {
         didSet {
