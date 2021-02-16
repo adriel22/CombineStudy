@@ -8,8 +8,8 @@
 
 import UIKit
 final class LoginView: UIView {
-    @Published var email: String? = ""
-    @Published var password: String? = ""
+    @Published private(set) var email: String? = ""
+    @Published private(set) var password: String? = ""
     var buttonIsEnabled: Bool = false {
         didSet {
             loginButton.isEnabled = buttonIsEnabled
@@ -21,7 +21,8 @@ final class LoginView: UIView {
         }
     }
     
-    var buttonAction: (() -> ())? = nil
+    var loginButtonAction: (() -> ())? = nil
+    var createAccountButtonAction: (() -> ())? = nil
     
     private lazy var emailTextField: UITextField = {
         let textField = UITextField()
@@ -54,9 +55,18 @@ final class LoginView: UIView {
         button.isEnabled = false
         button.layer.opacity = 0.5
         button.backgroundColor = .black
-        button.addTarget(self, action: #selector(buttonClicked), for: .touchUpInside)
+        button.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         
+        return button
+    }()
+    
+    private let createAccountButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Criar conta", for: .normal)
+        button.setTitleColor(.link, for: .normal)
+        button.addTarget(self, action: #selector(createAccountButtonClicked), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
@@ -69,8 +79,13 @@ final class LoginView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc private func buttonClicked() {
-        if let action = buttonAction {
+    @objc private func loginButtonClicked() {
+        if let action = loginButtonAction {
+            action()
+        }
+    }
+    @objc private func createAccountButtonClicked() {
+        if let action = createAccountButtonAction {
             action()
         }
     }
@@ -81,6 +96,7 @@ extension LoginView: CodableView {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
+        addSubview(createAccountButton)
     }
     
     func setupContraints() {
@@ -103,6 +119,13 @@ extension LoginView: CodableView {
             loginButton.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 15),
             loginButton.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -15),
             loginButton.heightAnchor.constraint(equalToConstant: 50)
+        ])
+        
+        NSLayoutConstraint.activate([
+            createAccountButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
+            createAccountButton.leadingAnchor.constraint(equalTo: layoutMarginsGuide.leadingAnchor, constant: 15),
+            createAccountButton.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor, constant: -15),
+            createAccountButton.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     
